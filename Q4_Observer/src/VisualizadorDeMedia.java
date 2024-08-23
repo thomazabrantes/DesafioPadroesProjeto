@@ -3,10 +3,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
 
-public class CalculadorDeMedia {
+public class VisualizadorDeMedia {
     private List<Integer> valores;
 
-    public CalculadorDeMedia(List<Integer> valores){
+    public VisualizadorDeMedia(List<Integer> valores){
         this.valores = valores;
     }
 
@@ -14,14 +14,15 @@ public class CalculadorDeMedia {
         this.valores = valores;
     }
 
-    public Integer quantidade(){
-        return valores.size();
+    public void acrescentaValor(Integer valor){
+        this.valores.add(valor);
     }
 
-    public double media(){
-        return valores.stream()
+    public void exibeMedia(){
+        double media = valores.stream()
             .mapToInt(Integer::intValue)
             .average()
             .orElse(0.0);
+        System.out.println("Media: "+media+", quantidade de elementos analisados: "+valores.size());
     }
 }
