@@ -1,16 +1,17 @@
 public class App {
-
-    // REFAZER !!!
-
     public static void main(String[] args) throws Exception {
-        var log = new LogNiveis();
+        Codificador cod = new Codificador();
 
-        log.log(1,"Eu acho que vi um gatinho!");
-        log.log(2,"Alguma coisa esta cheirando mal!");
-        log.log(3,"PANIC! Rebooting!");
+        String aux = "Desafio Padrões de Projeto";
 
-        for(String msg:log){
-            System.out.println(msg);
-        }
+        System.out.println(aux);
+        aux = cod.codifica(Codificador.Tipo.SIMPLES, aux);
+        System.out.println(aux);
+        aux = cod.deCodifica(Codificador.Tipo.SIMPLES, aux);
+        System.out.println(aux);
+        aux = cod.codifica(Codificador.Tipo.DESLOCA, aux);
+        System.out.println(aux);
+        aux = cod.deCodifica(Codificador.Tipo.DESLOCA, aux);
+        System.out.println(aux);
     }
 }
