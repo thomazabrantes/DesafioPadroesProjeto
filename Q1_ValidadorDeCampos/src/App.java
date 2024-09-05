@@ -1,7 +1,7 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        String inteiro = "21";
-        String matricula = "221891403";
+        //String inteiro = "21";
+        //String matricula = "221891403";
         String email = "bernardo.copstein@pucrs.br";
         Validador validadorEmail = new ValidadorEmail();
 
