@@ -28,8 +28,8 @@ public class Venda {
         return total;
     }
 
-    public void registrarVenda(Produto produto, int quantidade) {
-        ItemDeVenda item = new ItemDeVenda(produto, quantidade);
+    public void registrarVenda(ComponenteProduto prod, int quantidade) {
+        ItemDeVenda item = new ItemDeVenda(prod, quantidade);
         itens.add(item);
     }
 
