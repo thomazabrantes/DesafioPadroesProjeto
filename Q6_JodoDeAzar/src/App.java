@@ -10,7 +10,7 @@ public class App {
         System.out.println("D6: " + d6.getValor());
         System.out.println("D20: " + d20.getValor());
 
-        //
+        //"Decorando" com o histórico dos dados rodados
         DadoH d6H = new DadoH(d6, 6);
         DadoH d20H = new DadoH(d20, 20);
 
