@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class VisualizadorDeMedia {
+public class VisualizadorDeMedia implements Visualizador{
     private List<Integer> valores;
 
     public VisualizadorDeMedia(List<Integer> valores){
@@ -11,11 +11,14 @@ public class VisualizadorDeMedia {
         this.valores = valores;
     }
 
+    //classes que implementam a interface
+    @Override
     public void acrescentaValor(Integer valor){
         this.valores.add(valor);
     }
 
-    public void exibeMedia(){
+    @Override
+    public void exibe(){
         double media = valores.stream()
             .mapToInt(Integer::intValue)
             .average()
