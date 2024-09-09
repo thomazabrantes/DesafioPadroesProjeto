@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class VisualizadorDeSomatorio {
+public class VisualizadorDeSomatorio implements Visualizador{
     private List<Integer> valores;
 
     public VisualizadorDeSomatorio(List<Integer> valores){
@@ -11,11 +11,14 @@ public class VisualizadorDeSomatorio {
         this.valores = valores;
     }
 
+    //classes que implementam a interface
+    @Override
     public void acrescentaValor(Integer valor){
         this.valores.add(valor);
     }
 
-    public void exibeSomatorio(){
+    @Override
+    public void exibe(){
         Integer soma = valores.stream()
             .mapToInt(Integer::intValue)
             .sum();
